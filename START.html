@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+        
+    <head>
+        <title>JS Bootcamp</title>
+
+    </head>
+    <body>
+        <h1>This is an H1.</h1>
+    </body>
+
+    <script>
+            var body = document.querySelector("body");
+            var isBlue = true;
+            
+            setInterval(function () {
+                if (isBlue) {
+                    body.style.background = "blue";
+                }
+                else{
+                    body.style.background = "white";
+                }
+                isBlue = !isBlue;
+            }, 1000);
+            </script>
+</html>
