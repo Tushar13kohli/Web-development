@@ -1,0 +1,25 @@
+h1{
+    width: 30%;
+    text-align:center;
+    margin: 0 auto;
+    border: 5px solid black;
+    background: cyan;
+}
+.horizontal{
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+}
+
+td{
+    width: 100px;
+    height: 100px;
+}
+
+.vertical{
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+}
+
+table{
+    margin: 100px auto;
+}
