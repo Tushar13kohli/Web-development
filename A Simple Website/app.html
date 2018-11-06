@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        A SIMPLE WEBSITE
+    </title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            $('nav a').on("click", function (event) {
+                event.preventDefault();
+                var secID = $(this).attr('href');
+                var secTop = $(secID).offset().top;
+                $('html, body').animate({
+                    scrollTop: secTop
+                }, 1000);
+            });
+
+            $(window).scroll(function () {
+                var scrollPosition = $(window).scrollTop();
+                if (scrollPosition >= 100) {
+
+                    $('#main section').each(function (x) {
+                        if ($(this).position().top <= scrollPosition) {
+                            $('nav a.active').removeClass('active');
+                            $('nav a').eq(x).addClass('active');
+
+                        }
+                        console.log(scrollPosition + ' ' + $(this).position().top);
+                    })
+                }
+
+            })
+
+        });
+    </script>
+
+    <body>
+        <div id="navbar">
+            <nav>
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#products">PRODUCTS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </div>
+        <div id="main">
+            <div id="header">
+                <header>
+                    <h2>Welcome to a Simple 1 page website.</h2>
+                    <p> ut pharetra placerat mollis dictumst sit mattis at lorem. Neque congue malesuada sociosqu dictum proin
+                        mi commodo nostra malesuada inceptos.</p>
+                    <p>
+                        <img src="https://via.placeholder.com/1100x350">
+                    </p>
+                </header>
+            </div>
+            <section id="home">
+                <article>
+                    <h2 class="homeTitle">HOME</h2>
+                    <p>Erat sem leo inceptos phasellus blandit eros, habitant
+                        <a href="#">curabitur vivamus</a> Commodo accumsan libero auctor in neque dui praesent class. Pretium vulputate
+                        ut pharetra placerat mollis dictumst sit mattis at lorem. Neque congue malesuada sociosqu dictum
+                        proin mi commodo nostra malesuada inceptos. Ipsum ultrices velit torquent maecenas nullam montes
+                        a massa morbi magna quam conubia. Interdum risus leo aptent netus diam conubia tincidunt faucibus
+                        aliquet fusce. Montes posuere
+                        <a href="#">curabitur vivamus</a> natoque facilisi. In montes, aptent sodales neque tortor nibh varius. Auctor
+                        elit eu quis, in.</p>
+                </article>
+
+            </section>
+
+            <section id="about">
+                <article>
+                    <h2>ABOUT</h2>
+                    <p>Ipsum eleifend blandit sapien, lacus sapien nisl dictum placerat netus! Dolor orci augue cum montes egestas
+                        aliquet. Gravida aptent ultrices cras volutpat. Habitant laoreet elit duis aptent, feugiat dis fringilla
+                        malesuada. Ullamcorper odio ac odio at vitae consectetur vel vulputate blandit. Tempor magnis nullam
+                        conubia lorem nibh ac interdum ligula id per. In, nam dui lacus sociosqu sociis
+                        <a href="#">curabitur vivamus</a> luctus dictum lacinia condimentum hendrerit ridiculus torquent! Lectus viverra
+                        taciti aliquet suspendisse nullam nibh ridiculus. A pharetra nunc aenean odio nec est. Nam feugiat
+                        ante nullam. Elit donec arcu sed molestie conubia litora augue odio pharetra suscipit tempus habitant!</p>
+                </article>
+            </section>
+
+            <section id="products">
+                <article>
+                    <h2>PRODUCTS</h2>
+                    <ul>
+                        <li>
+                            <img src="https://via.placeholder.com/350x150">
+                            <p>about the image.</p>
+                        </li>
+                        <li>
+                            <img src="https://via.placeholder.com/350x150">
+                            <p>about the image.</p>
+                        </li>
+                        <li>
+                            <img src="https://via.placeholder.com/350x150">
+                            <p>about the image.</p>
+                        </li>
+                        <li>
+                            <img src="https://via.placeholder.com/350x150">
+                            <p>about the image.</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="contact">
+                <article>
+                    <h2>CONTACT</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">
+                                Name
+                            </label>
+                            <input type="text" name="name" class="form-control" placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                Email
+                            </label>
+                            <input type="email" name="email" class="form-control" placeholder="abc@example.com">
+                        </div>
+                        <button class="btn btn-success" type="submit">Send Email</button>
+
+                        <p>in neque dui praesent class. Pretium vulputate ut pharetra placerat mollis dictumst sit mattis at
+                            lorem. Neque </p>
+                    </form>
+                </article>
+            </section>
+            <footer>
+                COPYRIGHT &copy; Tushar Kohli
+                <div id="facebook">
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                </div>
+            </footer>
+
+        </div>
+    </body>
+</head>
+
+</html>
